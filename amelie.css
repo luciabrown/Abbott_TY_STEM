@@ -1,0 +1,77 @@
+/* Page background and default text */
+body {
+  background-color: black;          /* keep background black */
+  color: #2fd6c6;                   /* teal text */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Main title — neon red glow */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 19px;
+  text-align: center;
+  color: #ff1a1a;
+  text-shadow:
+    0 0 5px #ff1a1a,
+    0 0 10px #ff1a1a,
+    0 0 20px #ff0040,
+    0 0 40px #ff0040;
+}
+
+/* Subtitle */
+h2 {
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Center album image */
+img {
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+/* Song list styling */
+#songList {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+/* Each song row */
+#songList li {
+  margin-bottom: 10px;
+}
+
+/* Buttons — white pill shape */
+button {
+  background-color: white;
+  color: #2e2e2e;
+  border: none;
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 0 10px white;
+}
+
+/* Song info text (from JS span) */
+#songList span {
+  margin-left: 15px;
+  font-size: 1.15rem;
+  color: #2fd6c6;
+}
+
+/* Optional song info section */
+#songInfo {
+  margin-top: 30px;
+  text-align: center;
+}
