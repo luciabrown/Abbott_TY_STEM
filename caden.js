@@ -81,6 +81,21 @@ function createPopup(accent, text) {
   return popup;
 }
 
+
+// Lucia Bug Fix Helper Function
+document.addEventListener("mouseup", () => {
+  const popup = document.querySelector(".artist-popup");
+  if (!popup) return;
+
+  popup.style.opacity = "0";
+  popup.style.transform = "translate(-12px, -50%) scale(0.97)";
+  popup.addEventListener(
+    "transitionend",
+    () => popup.remove(),
+    { once: true }
+  );
+});
+
 /* ===============================
    Core Logic
 ================================ */
@@ -106,6 +121,9 @@ document.querySelectorAll("tbody tr").forEach(row => {
       artist.accent,
       `Most Played Song: ${artist.song}`
     );
+    
+    popup.className = "artist-popup"; // Lucia bug fix
+
 
     document.body.appendChild(popup);
 
