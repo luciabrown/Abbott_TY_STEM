@@ -1,4 +1,4 @@
-/* ===== Background ===== */
+/* ===== Background + Centering ===== */
 body {
   font-family: system-ui, -apple-system, sans-serif;
   background:
@@ -7,7 +7,13 @@ body {
     radial-gradient(circle at 50% 80%, #1a1f2b, transparent 60%),
     #02040a;
   color: #e6f0ff;
-  padding: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+  padding: 50px 20px;
 }
 
 /* ===== Title ===== */
@@ -24,21 +30,22 @@ table {
   margin: 0 auto;
   border-collapse: separate;
   border-spacing: 0 22px;
-  min-width: 500px;
+  min-width: 520px;
 }
 
 table, th, td {
   border: none;
 }
 
-/* ===== Header ===== */
+/* ===== Header (VERTICALLY ALIGNED) ===== */
 th {
-  text-align: left;
-  padding: 12px 26px;
+  padding: 22px 26px;          /* MATCH td padding */
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   opacity: 0.5;
+  text-align: left;
+  vertical-align: middle;     /* KEY FIX */
 }
 
 /* ===== Abstract Rows ===== */
@@ -49,15 +56,14 @@ tr {
   border-radius: 22px;
   overflow: hidden;
 
-  box-shadow:
-    0 22px 45px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.6);
 
   transition:
     transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.6s ease;
 }
 
-/* Soft abstract shape */
+/* Soft abstract glow */
 tr::before {
   content: "";
   position: absolute;
@@ -75,14 +81,14 @@ tr::before {
 /* Hover motion */
 tr:hover {
   transform: translateY(-10px) rotate(-0.25deg);
-  box-shadow:
-    0 40px 75px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 40px 75px rgba(0, 0, 0, 0.8);
 }
 
 /* ===== Cells ===== */
 td {
   padding: 22px 26px;
   font-size: 1rem;
+  vertical-align: middle;     /* KEY FIX */
 }
 
 /* Rounded ends */
@@ -92,9 +98,14 @@ tr td:first-child {
 
 tr td:last-child {
   border-radius: 0 22px 22px 0;
-  text-align: right;
   font-size: 0.9rem;
   opacity: 0.65;
+}
+
+/* ===== CENTER GENRE COLUMN ===== */
+th:last-child,
+td:last-child {
+  text-align: center;
 }
 
 /* ===== Artist Links ===== */

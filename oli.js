@@ -1,72 +1,34 @@
-/* GLOBAL — force full black page */
-html,
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Verdana, Geneva, sans-serif;
-    background-color: #000000 !important;
-    color: #3fffdc !important;
-}
+const albumInfo = {
+    dior: `
+Dior – MK
+Genre: Hip-Hop / Rap
+Release Year: 2025
+Label: Independent
+Popular Track: Dior
+`,
 
-/* LINKS */
-a {
-    color: #3fffdc;
-    text-decoration: none;
-    margin: 20px;
-    display: inline-block;
-}
+    starboy: `
+Starboy – The Weeknd
+Genre: R&B / Pop / Hip-Hop
+Release Year: 2016
+Label: XO / Republic Records
+Top Chart: #1 Billboard Hot 100
+`,
 
-a:hover {
-    text-decoration: underline;
-}
+    divide: `
+Divide (÷) – Ed Sheeran
+Genre: Pop / Folk-Pop
+Release Year: 2017
+Label: Asylum / Atlantic Records
+Popular Track: Shape of You
+`
+};
 
-/* LAYOUT */
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px;
-    display: flex;
-    gap: 40px;
-}
+// document.querySelectorAll(".photo-box img").forEach(img => {
+//     img.addEventListener("click", function (event) {
+//         event.preventDefault();
 
-/* LEFT PANEL */
-.left-panel {
-    width: 300px;
-}
-
-/* ALBUM IMAGE */
-.photo-box {
-    height: 300px;
-    background-color: #000000;
-    border: 2px solid #3fffdc;
-    border-radius: 16px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.photo-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* INFO BOXES — FORCE BLACK */
-.artist-info,
-.album-info {
-    background-color: #000000 !important;
-    border: 2px solid #3fffdc !important;
-    border-radius: 16px;
-    padding: 20px;
-    color: #3fffdc !important;
-}
-
-/* RIGHT PANEL */
-.album-info {
-    flex: 1;
-}
-
-/* TRACK LIST */
-#tracklist {
-    scroll-margin-top: 40px;
-}
+//         const albumKey = img.dataset.album;
+//         alert(albumInfo[albumKey]);
+//     });
+// });
